@@ -77,6 +77,21 @@ p {
   }
 }
 
+h2 {
+  font-size: calc(var(--yr) * 5);
+  line-height: calc(var(--yr) * 9);
+
+  @media (--s) {
+    font-size: calc(var(--yr) * 6.25);
+    line-height: calc(var(--yr) * 9);
+  }
+
+  @media (--m) {
+    font-size: calc(var(--yr) * 8);
+    line-height: calc(var(--yr) * 10);
+  }
+}
+
 h1 {
   font-size: calc(var(--yr) * 6.25);
   line-height: calc(var(--yr) * 9);
@@ -386,6 +401,113 @@ h1 {
           }
           /* transform: translateY(-50%); */
           /* height: 350px; */
+        }
+      }
+    }
+  }
+
+  &_services {
+    & .video {
+      margin-bottom: calc(var(--yr) * 12);
+    }
+
+    & section {
+      margin-bottom: calc(var(--yr) * 12);
+
+      & .text {
+        padding-right: 30%;
+      }
+    }
+
+    @media (--s) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: var(--xr);
+
+      & section {
+        grid-column: 1 / span 2;
+
+        & .text {
+          padding-right: 0;
+        }
+
+        & .media {
+          margin-bottom: calc(var(--yr) * 4);
+
+          & figure {
+            position: relative;
+            margin: 0;
+
+            &:before {
+              padding-top: 50%;
+              display: block;
+              content: '';
+            }
+
+            & div {
+              background-color: red;
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+
+        &.fix {
+          display: flex;
+
+          & .text {
+            width: calc(3 / 8 * 100%);
+          }
+
+          & .media {
+            padding-right: calc(var(--xr));
+            width: calc(5 / 8 * 100%);
+          }
+        }
+
+        &.body {
+          display: flex;
+
+          & .text {
+            order: -1;
+            width: calc(3 / 8 * 100%);
+          }
+
+          & .media {
+            padding-left: calc(var(--xr));
+            width: calc(5 / 8 * 100%);
+          }
+        }
+
+        &.tune,
+        &.polish {
+          grid-column: 1 / 2;
+        }
+
+        &.chip,
+        &.noise {
+          grid-column: 2 / 3;
+        }
+      }
+    }
+
+    @media (--l) {
+      grid-column-gap: calc(var(--xr) * 2);
+
+      & section {
+        &.fix {
+          & .media {
+            padding-right: calc(var(--xr) * 2);
+          }
+        }
+
+        &.body {
+          & .media {
+            padding-left: calc(var(--xr) * 2);
+          }
         }
       }
     }
