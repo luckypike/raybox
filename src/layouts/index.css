@@ -639,6 +639,29 @@ h1 {
       }
     }
   }
+
+  &_contacts {
+    & .map {
+      &_map {
+        position: relative;
+        width: 100%;
+
+        &::before {
+          padding-top: 125%;
+          display: block;
+          content: '';
+        }
+
+        & > div {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .footer {
