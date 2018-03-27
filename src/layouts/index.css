@@ -206,13 +206,23 @@ h1 {
   }
 
   &_burger {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: fixed;
+    right: calc(var(--xr));
+    top: calc(var(--yr) * 10);
+
+    @media (--s) {
+      right: calc(var(--xr) * 2);
+    }
+
+    @media (--m) {
+      right: calc(var(--xr) * 4);
+      top: calc(var(--yr) * 11);
+    }
 
     & svg {
       display: block;
       height: calc(var(--yr) * 10);
+      transform: translateX(8px);
 
       & path {
         stroke: var(--light_color);
@@ -311,10 +321,6 @@ h1 {
         }
       }
     }
-
-    &_burger {
-      top: var(--yr);
-    }
   }
 
   &.active {
@@ -337,6 +343,7 @@ h1 {
       }
 
       &_burger {
+
         & svg {
           & path {
             stroke: var(--base_color);

@@ -24,6 +24,12 @@ class Header extends React.Component {
   componentDidMount() {
   }
 
+  inActive =() => {
+    this.setState({
+      active: false
+    });
+  }
+
   render() {
     return (
       <header className={classNames('header', { 'active': this.state.active })}>
@@ -67,16 +73,16 @@ class Header extends React.Component {
         <div className="header_nav">
           <ul>
             <li>
-              <Link to="/" activeClassName="active" exact>Главная</Link>
+              <Link to="/" activeClassName="active" exact onClick={this.inActive}>Главная</Link>
             </li>
             <li>
-              <Link to="/services" activeClassName="active">Услуги</Link>
+              <Link to="/services" activeClassName="active" onClick={this.inActive}>Услуги</Link>
             </li>
             <li>
-              <Link to="/works" activeClassName="active">Наши работы</Link>
+              <Link to="/works" activeClassName="active" onClick={this.inActive}>Наши работы</Link>
             </li>
             <li>
-              <Link to="/contacts" activeClassName="active">Контакты</Link>
+              <Link to="/contacts" activeClassName="active" onClick={this.inActive}>Контакты</Link>
             </li>
           </ul>
         </div>
