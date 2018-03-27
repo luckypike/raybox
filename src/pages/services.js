@@ -2,6 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
+import videoNoise from './services/noise.mp4';
+import videoTune from './services/tune.mp4';
+import videoIntro from './services/intro.mp4';
+
 class ServicesPage extends React.Component {
   render() {
     return (
@@ -19,7 +23,11 @@ class ServicesPage extends React.Component {
         </section>
 
         <div className="video">
-          Видео
+          <div>
+          </div>
+          <video className="video" playsInline autoPlay muted loop>
+            <source src={videoIntro} type="video/mp4" />
+          </video>
         </div>
 
         <section className="fix">
@@ -41,8 +49,13 @@ class ServicesPage extends React.Component {
         </section>
 
         <section className="tune">
+
+
           <div className="media">
             <figure><div></div></figure>
+            <video className="video" playsInline autoPlay muted loop>
+              <source src={videoTune} type="video/mp4" />
+            </video>
           </div>
 
           <div className="text">
@@ -115,6 +128,9 @@ class ServicesPage extends React.Component {
         <section className="noise">
           <div className="media">
             <figure><div></div></figure>
+            <video className="video" playsInline autoPlay muted loop>
+              <source src={videoNoise} type="video/mp4" />
+            </video>
           </div>
 
           <div className="text">

@@ -407,15 +407,122 @@ h1 {
   }
 
   &_services {
-    & .video {
+    & > .video {
       margin-bottom: calc(var(--yr) * 12);
+      position: relative;
+      overflow: hidden;
+
+      & div {
+        position: relative;
+        margin: 0;
+        width: 100%;
+
+        &::before {
+          padding-top: 50%;
+          display: block;
+          content: '';
+
+          @media (--m) {
+            padding-top: 30%;
+          }
+        }
+
+        & div {
+          background-position: center;
+          background-size: cover;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+
+      & .video {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
     }
 
     & section {
       margin-bottom: calc(var(--yr) * 12);
 
-      & .text {
-        padding-right: 30%;
+      & .media {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: calc(var(--yr) * 2);
+
+        & figure {
+          position: relative;
+          margin: 0;
+
+          &::before {
+            padding-top: 50%;
+            display: block;
+            content: '';
+          }
+
+          & div {
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          }
+        }
+
+        & .video {
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+      }
+
+      &.fix {
+        & .media {
+          & figure div {
+            background-image: url('../pages/services/fix.jpg');
+          }
+        }
+      }
+
+      &.polish {
+        & .media {
+          & figure div {
+            background-image: url('../pages/services/polish.jpg');
+          }
+        }
+      }
+
+      &.body {
+        & .media {
+          & figure div {
+            background-image: url('../pages/services/body.jpg');
+          }
+        }
+      }
+
+      &.chip {
+        & .media {
+          & figure div {
+            background-image: url('../pages/services/chip.jpg');
+          }
+        }
       }
     }
 
@@ -424,35 +531,19 @@ h1 {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: var(--xr);
 
+      & > .video {
+        grid-column: 1 / span 2;
+      }
+
       & section {
         grid-column: 1 / span 2;
 
         & .text {
-          padding-right: 0;
+          /* padding-right: 30%; */
         }
 
         & .media {
           margin-bottom: calc(var(--yr) * 4);
-
-          & figure {
-            position: relative;
-            margin: 0;
-
-            &:before {
-              padding-top: 50%;
-              display: block;
-              content: '';
-            }
-
-            & div {
-              background-color: red;
-              position: absolute;
-              left: 0;
-              top: 0;
-              right: 0;
-              bottom: 0;
-            }
-          }
         }
 
         &.fix {
@@ -490,6 +581,35 @@ h1 {
         &.chip,
         &.noise {
           grid-column: 2 / 3;
+        }
+      }
+    }
+
+    @media (--m) {
+      & > .video {
+        margin-bottom: calc(var(--yr) * 18);
+      }
+
+      & section {
+        margin-bottom: calc(var(--yr) * 18);
+
+        &.noise,
+        &.tune {
+          position: relative;
+
+          & .media {
+            position: absolute;
+            opacity: 0.3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+          }
+
+          & .text {
+            padding: calc(var(--yr) * 6) var(--xr);
+          }
         }
       }
     }
