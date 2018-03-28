@@ -642,6 +642,17 @@ h1 {
 
   &_contacts {
     & .map {
+      margin-top: calc(var(--yr) * 12);
+
+      &_text {
+        margin-bottom: calc(var(--yr) * 4);
+
+        & a {
+          color: var(--light_color);
+          text-decoration: none;
+        }
+      }
+
       &_map {
         position: relative;
         width: 100%;
@@ -650,6 +661,18 @@ h1 {
           padding-top: 125%;
           display: block;
           content: '';
+
+          @media (--s) {
+            padding-top: 80%;
+          }
+
+          @media (--m) {
+            padding-top: 65%;
+          }
+
+          @media (--l) {
+            padding-top: 50%;
+          }
         }
 
         & > div {
@@ -658,6 +681,20 @@ h1 {
           top: 0;
           right: 0;
           bottom: 0;
+        }
+      }
+
+      @media (--m) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: calc(var(--yr) * 18);
+
+        &_text {
+          align-self: center;
+        }
+
+        &_map {
+          grid-column: 2 / 4;
         }
       }
     }
