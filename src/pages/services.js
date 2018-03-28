@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 
 import videoNoise from './services/noise.mp4';
 import videoTune from './services/tune.mp4';
-import videoIntro from './services/intro.mp4';
 
 class ServicesPage extends React.Component {
   render() {
@@ -21,14 +20,6 @@ class ServicesPage extends React.Component {
             <p>Придаем вашему автомобилю фирменный стиль.</p>
           </div>
         </section>
-
-        <div className="video">
-          <div>
-          </div>
-          <video className="video" playsInline autoPlay muted loop>
-            <source src={videoIntro} type="video/mp4" />
-          </video>
-        </div>
 
         <section className="fix">
           <div className="media">
