@@ -2,14 +2,38 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
+import jsonp from 'jsonp';
+
 class WorksPage extends React.Component {
   constructor(props) {
     super(props);
-    console.log();
+
+    this.state = {
+      works: []
+    }
+  }
+
+  componentDidMount() {
+    this.fetchWorks();
+  }
+
+  fetchWorks() {
+    jsonp('https://api.vk.com/method/photos.getAlbums?owner_id=-21183461&need_covers=1&photo_sizes=1&v=5.73', null, (err, data) => {
+      if(!err) {
+        this.setState({
+          works: data.response.items
+        });
+      }
+    });
   }
 
   render() {
-    const works = this.props.data.allWorksJson.edges;
+    let works = this.state.works.filter((work) => work.description.includes('#raybox.su'));
+    if(works.length < 1) {
+      works = this.state.works;
+    }
+
+    works = works.slice(0, 12);
 
     return (
       <div className="page page_works">
@@ -23,13 +47,12 @@ class WorksPage extends React.Component {
         <div className="works_list">
           {works.map((work, _) =>
             <div key={_} className="works_list_item">
-              <a href={work.node.url} target="_blank">
-                <div className="img">
-                  <img src={work.node.img} />
+              <a href={`https://vk.com/album${work.owner_id}_${work.id}`} target="_blank">
+                <div className="img" style={{ backgroundImage: `url(${work.sizes[work.sizes.length - 1].src})` }}>
                 </div>
 
                 <div className="title">
-                  {work.node.title}
+                  {work.title}
                 </div>
               </a>
 
@@ -40,19 +63,5 @@ class WorksPage extends React.Component {
     );
   }
 }
-
-export const query = graphql`
-  query WorksQuery {
-    allWorksJson {
-      edges {
-        node {
-          url
-          title
-          img
-        }
-      }
-    }
-  }
-`;
 
 export default WorksPage;
