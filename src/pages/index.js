@@ -22,6 +22,9 @@ class IndexPage extends React.Component {
     this.interval = setInterval(() => this.videoUpdate(), 50);
 
     this.state.swiper = new Swiper(this.swiper, {
+      autoplay: {
+        delay: 5000,
+      },
       pagination: {
         el: '.swiper-pagination',
         type: 'custom',
@@ -30,6 +33,11 @@ class IndexPage extends React.Component {
         }
       },
     });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+    this.state.swiper.destroy(true, true);
   }
 
   videoUpdate = () => {
