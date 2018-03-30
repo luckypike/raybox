@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Form from '../Form';
 
 class Contact extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Contact extends React.Component {
         </div>
 
         <div className="contact_buttons">
-          <div className="btn">Заказать услугу</div>
+          <Form text="Заказать услугу" />
           <Link to="/contacts" className="btn">Контакты</Link>
         </div>
       </div>
