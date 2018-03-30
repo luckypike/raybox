@@ -13,12 +13,29 @@ class IndexPage extends React.Component {
     super(props);
 
     this.state = {
-      swiper: null
+      swiper: null,
+      video: 0
     }
   }
 
   componentDidMount() {
-    this.state.swiper = new Swiper(this.swiper);
+    this.interval = setInterval(() => this.videoUpdate(), 50);
+
+    this.state.swiper = new Swiper(this.swiper, {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return '<span class="current">0' + current + '</span><span class="total">0' + total + '</span>';
+        }
+      },
+    });
+  }
+
+  videoUpdate = () => {
+    this.setState({
+      video: (this.video.currentTime / this.video.duration * 100) + '%'
+    })
   }
 
   render() {
@@ -66,11 +83,14 @@ class IndexPage extends React.Component {
               </section>
             </div>
           </div>
+
+          <div className="swiper-pagination"></div>
+          <div className="swiper-timer" style={{ width: this.state.video }}></div>
         </div>
 
 
 
-        <video className="bgvid" playsInline autoPlay muted loop>
+        <video className="bgvid" playsInline autoPlay muted loop ref={(video) => { this.video = video; }}>
           <source src={video} type="video/mp4" />
         </video>
 
