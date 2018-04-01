@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "autosize": "^4.0.1",
     "classnames": "^2.2.5",
     "gatsby": "^1.9.238",
     "gatsby-link": "^1.6.39",

@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
+import Form from '../components/Form';
+
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 
 class ContactsPage extends React.Component {
@@ -29,6 +31,8 @@ class ContactsPage extends React.Component {
               <br />
               Правдинская улица, 27У
             </p>
+
+            <Form />
           </div>
           <div className="map_map">
             <YMaps>
