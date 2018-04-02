@@ -396,7 +396,7 @@ h1 {
       bottom: 0;
 
       & .swiper-pagination {
-        display: flex;
+        display: none;
         bottom: calc(var(--yr) * 10);
         justify-content: center;
         width: auto;
@@ -431,10 +431,10 @@ h1 {
         }
 
         @media (--s) {
-
+          display: flex;
           font-size: calc(var(--yr) * 8);
           line-height: calc(var(--yr) * 8);
-          right: calc(var(--xr) + 0.5rem);
+          right: calc(var(--xr) * 2);
           transform: none;
           left: auto;
 
@@ -444,7 +444,7 @@ h1 {
         }
 
         @media (--m) {
-          right: calc(var(--xr) * 4 + 0.5rem);
+          right: calc(var(--xr) * 4);
         }
       }
 
@@ -454,7 +454,7 @@ h1 {
           position: absolute;
           left: var(--xr);
           top: 30%;
-          padding-right: var(--xr);
+          padding-right: calc(var(--xr) * 2);
 
           & p:last-child {
             margin-top: calc(var(--yr) * 10);
@@ -867,6 +867,7 @@ h1 {
 
   @media (--s) {
     bottom: calc(var(--yr) * 30);
+    right: calc(var(--xr) * 2);
 
     &_social {
       &::before {
@@ -877,7 +878,7 @@ h1 {
 
   @media (--m) {
     bottom: calc(var(--yr) * 50);
-    right: calc(var(--xr) * 4 + 0.5rem);
+    right: calc(var(--xr) * 4);
   }
 }
 

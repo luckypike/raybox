@@ -35,7 +35,7 @@ class Header extends React.Component {
       <header className={classNames('header', { 'active': this.state.active })}>
         <div className="header_container">
           <div className="header_logo">
-            <Link to="/">
+            <Link to="/"  onClick={this.inActive}>
               <Logo />
             </Link>
           </div>

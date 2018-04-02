@@ -10,10 +10,10 @@ class Footer extends React.Component {
       <footer className="footer">
         <div className="footer_container">
           <div className="footer_social">
-            <a href="https://vk.com/rbgnn">
+            <a href="https://vk.com/rbgnn" target="_blank">
               <Vk />
             </a>
-            <a href="https://instagram.com/rbgnn">
+            <a href="https://instagram.com/rbgnn" target="_blank">
               <Inst />
             </a>
           </div>
