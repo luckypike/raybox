@@ -75,7 +75,7 @@ class FormD extends React.Component {
       send: true
     });
 
-    axios.get(withPrefix('/mail.php'), {
+    axios.post(withPrefix('/mail.php'), {
       project_name: 'RayBox',
       admin_email: 'info@raybox.su',
       form_subject: 'Сообщение с сайта',
