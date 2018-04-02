@@ -111,6 +111,7 @@ h1 {
 
 .btn {
   color: var(--light_color);
+  border: 0;
   padding: calc(var(--yr) * 2) var(--xr);
   background-color: var(--hl_color);
   display: inline-block;
@@ -985,6 +986,25 @@ h1 {
         padding: calc(var(--yr) * 2) var(--xr);
         width: 100%;
         outline: none;
+      }
+
+      & textarea {
+        resize: none;
+      }
+    }
+
+    &_submit {
+      & p {
+        font-size: calc(var(--yr) * 3.5);
+        line-height: calc(var(--yr) * 4);
+
+        & a {
+          color: var(--hl_color) !important;
+
+          &:hover {
+            color: color(var(--hl_color) blackness(+10%)) !important;
+          }
+        }
       }
     }
   }

@@ -79,7 +79,7 @@ class Header extends React.Component {
               <Link to="/services" activeClassName="active" onClick={this.inActive}>Услуги</Link>
             </li>
             <li>
-              <Link to="/works" activeClassName="active" onClick={this.inActive}>Наши работы</Link>
+              <Link to="/works" activeClassName="active" onClick={this.inActive}>Работы</Link>
             </li>
             <li>
               <Link to="/contacts" activeClassName="active" onClick={this.inActive}>Контакты</Link>
