@@ -5,6 +5,14 @@ module.exports = {
   pathPrefix: '/public',
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-svg'
+    'gatsby-plugin-react-svg',
+    {
+      resolve: `gatsby-plugin-yandex-metrika`,
+      options: {
+        trackingId: '44415946',
+        webvisor: true,
+        trackHash: true
+      }
+    }
   ],
 };
