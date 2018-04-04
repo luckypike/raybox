@@ -18,7 +18,7 @@ class Contact extends React.Component {
 
         <div className="contact_buttons">
           <Form text="Заказать услугу" />
-          <Link to="/contacts" className="btn">Контакты</Link>
+          <Link to="/contacts/" className="btn">Контакты</Link>
         </div>
       </div>
     );
