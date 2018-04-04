@@ -47,17 +47,17 @@ class Header extends React.Component {
           <div className="header_menu">
             <ul>
               <li>
-                <Link to="/services" activeClassName="active">
+                <Link to="/services/" activeClassName="active">
                   Услуги
                 </Link>
               </li>
               <li>
-                <Link to="/works" activeClassName="active">
+                <Link to="/works/" activeClassName="active">
                   Работы
                 </Link>
               </li>
               <li>
-                <Link to="/contacts" activeClassName="active">
+                <Link to="/contacts/" activeClassName="active">
                   Контакты
                 </Link>
               </li>
@@ -76,13 +76,13 @@ class Header extends React.Component {
               <Link to="/" activeClassName="active" exact onClick={this.inActive}>Главная</Link>
             </li>
             <li>
-              <Link to="/services" activeClassName="active" onClick={this.inActive}>Услуги</Link>
+              <Link to="/services/" activeClassName="active" onClick={this.inActive}>Услуги</Link>
             </li>
             <li>
-              <Link to="/works" activeClassName="active" onClick={this.inActive}>Работы</Link>
+              <Link to="/works/" activeClassName="active" onClick={this.inActive}>Работы</Link>
             </li>
             <li>
-              <Link to="/contacts" activeClassName="active" onClick={this.inActive}>Контакты</Link>
+              <Link to="/contacts/" activeClassName="active" onClick={this.inActive}>Контакты</Link>
             </li>
           </ul>
         </div>

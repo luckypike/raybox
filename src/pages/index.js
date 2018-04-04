@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
                   Работы для любой марки авто – премиум и эконом класса.
                 </p>
                 <p>
-                  <Link to="/services" className="btn">Наши услуги</Link>
+                  <Link to="/services/" className="btn">Наши услуги</Link>
                 </p>
               </section>
             </div>
@@ -73,7 +73,7 @@ class IndexPage extends React.Component {
                   Наши сотрудники имеют огромный опыт в сфере шумоизоляции и знают, как сделать вашу машину более комфортной.
                 </p>
                 <p>
-                  <Link to="/works" className="btn">Наши работы</Link>
+                  <Link to="/works/" className="btn">Наши работы</Link>
                 </p>
               </section>
             </div>
@@ -86,7 +86,7 @@ class IndexPage extends React.Component {
                   Заполните форму, мы перезвоним вам и назначим время.
                 </p>
                 <p>
-                  <Link to="/contacts" className="btn">Оставить заявку</Link>
+                  <Link to="/contacts/" className="btn">Оставить заявку</Link>
                 </p>
               </section>
             </div>

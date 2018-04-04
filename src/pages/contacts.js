@@ -21,8 +21,6 @@ class ContactsPage extends React.Component {
         <div className="map">
           <div className="map_text">
             <p>
-              <a href="tel://+78312834043">+7 (831) 283-40-43</a>
-              <br />
               <a href="tel:+79103931456">+7 (910) 393-14-56</a>
             </p>
             <p><a href="mailto:info@rbgnn.su">info@rbgnn.su</a></p>
