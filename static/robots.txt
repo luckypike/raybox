@@ -1,0 +1,3 @@
+Host: https://raybox.su
+Sitemap: https://raybox.su/sitemap.xml
+Disallow: /design
