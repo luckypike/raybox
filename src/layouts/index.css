@@ -485,50 +485,6 @@ h1 {
   }
 
   &_services {
-    & > .video {
-      margin-bottom: calc(var(--yr) * 12);
-      position: relative;
-      overflow: hidden;
-
-      & div {
-        position: relative;
-        margin: 0;
-        width: 100%;
-
-        &::before {
-          padding-top: 50%;
-          display: block;
-          content: '';
-
-          @media (--m) {
-            padding-top: 30%;
-          }
-        }
-
-        & div {
-          background-position: center;
-          background-size: cover;
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-        }
-      }
-
-      & .video {
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-      }
-    }
-
     & section {
       margin-bottom: calc(var(--yr) * 12);
 
@@ -686,11 +642,6 @@ h1 {
 
       & section {
         margin-bottom: calc(var(--yr) * 18);
-
-        &.noise,
-        &.chip {
-          margin-top: 25%;
-        }
       }
     }
 
@@ -699,7 +650,9 @@ h1 {
 
       & section {
         & .text {
-          max-width: 600px;
+          & > * {
+            max-width: 600px;
+          }
         }
 
         &.fix {
@@ -822,10 +775,6 @@ h1 {
           margin-top: calc(var(--yr) * 18);
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: calc(var(--yr) * 8) calc(var(--xr) * 2);
-
-          &_item {
-
-          }
         }
       }
     }
