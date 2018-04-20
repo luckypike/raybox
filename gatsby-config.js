@@ -11,7 +11,8 @@ module.exports = {
       options: {
         trackingId: '44415946',
         webvisor: true,
-        trackHash: true
+        trackHash: true,
+        version: 2
       }
     }
   ],
