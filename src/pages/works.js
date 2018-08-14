@@ -18,7 +18,7 @@ class WorksPage extends React.Component {
   }
 
   fetchWorks() {
-    jsonp('https://api.vk.com/method/photos.getAlbums?owner_id=-21183461&need_covers=1&photo_sizes=1&v=5.73', null, (err, data) => {
+    jsonp('https://api.vk.com/method/photos.getAlbums?access_token=a37359c8a37359c8a37359c86ca316fc9baa373a37359c8f801856aff2618d97ece0683&owner_id=-21183461&need_covers=1&photo_sizes=1&v=5.73', null, (err, data) => {
       if(!err) {
         this.setState({
           works: data.response.items
