@@ -4,19 +4,19 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "autosize": "^4.0.1",
+    "autosize": "^4.0.2",
     "axios": "^0.18.0",
-    "classnames": "^2.2.5",
-    "gatsby": "^1.9.238",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
+    "classnames": "^2.2.6",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-svg": "^1.1.1",
-    "gatsby-plugin-yandex-metrika": "^1.0.5",
+    "gatsby-plugin-yandex-metrika": "^1.3.0",
     "jsonp": "^0.2.1",
     "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0",
-    "react-yandex-maps": "^2.1.4",
-    "swiper": "^4.2.0"
+    "react-yandex-maps": "^2.2.0",
+    "swiper": "^4.3.5"
   },
   "keywords": [
     "gatsby"
@@ -29,6 +29,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.14.2"
   }
 }

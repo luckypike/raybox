@@ -27,22 +27,22 @@ class ContactsPage extends React.Component {
             <p>
               Нижний Новгород,
               <br />
-              Правдинская улица, 27У
+              Правдинская улица, 27А
             </p>
 
             <Form />
           </div>
           <div className="map_map">
             <YMaps>
-              <Map state={{ center: [56.282985, 43.955303], zoom: 15 }} width="100%" height="100%">
+              <Map state={{ center: [56.284132, 43.957638], zoom: 15 }} width="100%" height="100%">
 
                 <Placemark
                   geometry={{
-                    coordinates: [56.282985, 43.955303]
+                    coordinates: [56.284132, 43.957638]
                   }}
                   properties={{
-                    iconCaption: 'Правдинская, 27У',
-                    balloonContent: 'RayBoxGarage Россия, Нижний Новгород, Правдинская улица, 27У'
+                    iconCaption: 'Правдинская, 27А',
+                    balloonContent: 'RayBoxGarage Россия, Нижний Новгород, Правдинская улица, 27А'
                   }}
                   options={{
                     preset: 'islands#darkgreenAutoIcon'
